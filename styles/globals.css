@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-r from-pink-400 via-pink-200 to-pink-400 min-h-screen;
+}
+
+/* Optional: Add custom classes for cards, buttons, and sections to use pink accents */
+.card-pink {
+  @apply bg-white bg-opacity-80 border border-pink-200 shadow-pink-200;
+}
+
+.button-pink {
+  @apply bg-pink-500 text-white hover:bg-pink-600 transition;
+}
+
+.section-pink {
+  @apply bg-gradient-to-r from-pink-400 via-pink-200 to-pink-400;
+}
+
+button {
+  font-weight: 500;
+}
