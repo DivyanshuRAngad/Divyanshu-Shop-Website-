@@ -7,7 +7,7 @@ import { products } from '../data/products';
 const previousPurchases = [
   { id: 1, name: 'Wireless Headphones', date: '2024-05-01', price: 3999, image: '/headphones.png', rating: 4.5 },
   { id: 4, name: 'Wireless Earphones', date: '2024-04-15', price: 1999, image: '/earphones.png', rating: 4.8 },
-  { id: 5, name: 'Gaming Mouse', date: '2024-03-20', price: 1499, image: '/Mouse.png', rating: 4.2 },
+  { id: 5, name: 'Gaming Mouse', date: '2024-03-20', price: 1499, image: '/mouse.png', rating: 4.2 },
   { id: 6, name: 'Wired Earphones', date: '2024-02-15', price: 899, image: '/wired_earphones.png', rating: 4.6 },
   { id: 7, name: 'Mechanical Keyboard', date: '2024-01-20', price: 2999, image: '/keyboard.png', rating: 4.9 },
 ];

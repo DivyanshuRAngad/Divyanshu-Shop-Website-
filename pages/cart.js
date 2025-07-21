@@ -101,10 +101,10 @@ export default function CartPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button
-                onClick={proceedToPayment}
+            <button
+              onClick={proceedToPayment}
                 className="px-8 py-3 bg-blue-600 text-white text-lg rounded-lg hover:bg-blue-700 hover:scale-105 hover:shadow-xl transition-all duration-200 flex items-center gap-2"
-              >
+            >
                 <span>💳</span>
                 Pay Online
               </button>
@@ -115,7 +115,7 @@ export default function CartPage() {
               >
                 <span>💰</span>
                 Cash on Delivery
-              </button>
+            </button>
             </div>
             
             <p className="text-sm text-gray-600 mt-4">

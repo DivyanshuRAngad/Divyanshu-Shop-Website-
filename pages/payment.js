@@ -22,8 +22,8 @@ export default function PaymentPage() {
 
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.discountedPrice * (item.quantity || 1),
-    0
-  );
+  0
+);
   const shipping = subtotal > 500 ? 0 : 100;
   const tax = subtotal * 0.18; // 18% GST
   const total = subtotal + shipping + tax;
@@ -76,28 +76,28 @@ export default function PaymentPage() {
 
     setLoading(true);
     try {
-      const res = await loadRazorpayScript();
-      if (!res) {
+    const res = await loadRazorpayScript();
+    if (!res) {
         throw new Error('Payment gateway failed to load');
-      }
+    }
 
       // Generate order ID
       const newOrderId = 'ORD' + Date.now() + Math.random().toString(36).substr(2, 5).toUpperCase();
       setOrderId(newOrderId);
 
-              const options = {
+    const options = {
           key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || 'rzp_test_RrOgYIfMNJYDv0',
           amount: Math.round(total * 100), // Amount in paise
-          currency: 'INR',
-          name: 'Divyanshu Shop',
+      currency: 'INR',
+      name: 'Divyanshu Shop',
           description: `Order ${newOrderId}`,
           image: '/logo.png',
           order_id: newOrderId,
           handler: function (response) {
             // Payment successful
             handlePaymentSuccess(response);
-          },
-          prefill: {
+      },
+      prefill: {
             name: customerInfo.name,
             email: customerInfo.email,
             contact: customerInfo.phone,
@@ -106,19 +106,19 @@ export default function PaymentPage() {
             address: customerInfo.address,
             city: customerInfo.city,
             pincode: customerInfo.pincode,
-          },
-          theme: {
+      },
+      theme: {
             color: '#ec4899', 
-          },
+      },
           modal: {
             ondismiss: function() {
               setLoading(false);
             }
           }
-        };
+    };
 
-      const paymentObject = new window.Razorpay(options);
-      paymentObject.open();
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
     } catch (error) {
       console.error('Payment error:', error);
       alert('Payment failed. Please try again.');
@@ -338,8 +338,8 @@ export default function PaymentPage() {
               </div>
 
               {/* Pay Button */}
-              <button
-                onClick={handlePayment}
+      <button
+        onClick={handlePayment}
                 disabled={loading}
                 className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-200 ${
                   loading
@@ -355,7 +355,7 @@ export default function PaymentPage() {
                 ) : (
                   `Pay ₹${total.toLocaleString()}`
                 )}
-              </button>
+      </button>
 
               {/* Security Notice */}
               <div className="text-center text-sm text-gray-600">
@@ -365,7 +365,7 @@ export default function PaymentPage() {
             </div>
           </div>
         </div>
-      </div>
+    </div>
       <Footer />
     </>
   );

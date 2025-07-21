@@ -60,14 +60,14 @@ export default function Navbar() {
       {/* Search bar */}
       <div className="my-2 sm:my-1 flex justify-center w-full sm:w-auto">
         <div className="relative group" ref={searchRef}>
-          <input
-            type="text"
-            value={searchQuery}
+        <input
+          type="text"
+          value={searchQuery}
             onChange={handleSearchChange}
             onFocus={handleSearchFocus}
-            placeholder="Search your Favourite..."
+          placeholder="Search your Favourite..."
             className="px-4 py-2 rounded-full text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-400 w-64 border border-gray-300 transition-all duration-300 group-hover:border-blue-400 group-hover:shadow-lg group-hover:scale-105"
-          />
+        />
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-pink-400 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none"></div>
           
           {/* Search Results Dropdown */}
@@ -120,7 +120,7 @@ export default function Navbar() {
 
         {/* Account Section - Simplified */}
         <Link href="/account" className="flex items-center gap-1 hover:bg-blue-100 rounded text-blue-700 px-3 py-1 transition-all duration-200 hover:scale-105">
-          👤 Your Account
+            👤 Your Account
         </Link>
       </div>
     </nav>

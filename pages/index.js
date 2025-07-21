@@ -8,7 +8,7 @@ const categories = [
   { name: 'Smart Watches', image: '/smartwatch.png' },
   { name: 'Headphones', image: '/headphones.png' },
   { name: 'Speakers', image: '/speaker.png' },
-  { name: 'Accessories', image: '/Accessories.png' },
+  { name: 'Accessories', image: '/accessories.png' },
 ];
 
 // Ensure unique products in each section

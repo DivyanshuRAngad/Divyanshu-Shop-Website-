@@ -37,7 +37,7 @@ export const products = [
     discountedPrice: 1499,
     originalPrice: 2499,
     description: "High-precision gaming mouse with customizable RGB lighting, programmable buttons, and ultra-fast response time for competitive gaming.",
-    image: "/Mouse.png"
+    image: "/mouse.png"
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ export const products = [
     discountedPrice: 39999,
     originalPrice: 49999,
     description: "High-performance laptop with latest processor, ample storage, and stunning display. Perfect for work, gaming, and entertainment.",
-    image: "/Laptop.png"
+    image: "/laptop.png"
   },
   {
     id: 9,
@@ -77,6 +77,6 @@ export const products = [
     discountedPrice: 599,
     originalPrice: 999,
     description: "Essential tech accessories including cables, adapters, and protective cases. Enhance your device experience.",
-    image: "/Accessories.png"
+    image: "/accessories.png"
   }
 ];
